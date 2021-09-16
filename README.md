@@ -16,13 +16,12 @@ Thoughts...One implementation may perhaps be achieved simply by sending a transa
 2. User will select will contract type
 3. User will register beneficiaries
 4. User will deposit a sum for later distribution in ETH
-5. User will optionally
-6. (optional) contract will invest funds or 'yield farm' for relevant time period.
-7. Contract will somehow 'listen' and receive annual 'proof-of-life' validation
-8. If no 'proof-of-life' validation received within period,
+5. Contract will somehow 'listen' and receive annual 'proof-of-life' validation
+6. If no 'proof-of-life' validation received within period,
 
-**Optional Design Considerations:**
+**Optional functionality / Design Considerations:**
 
+- Contract invests funds or 'yield farm' for relevant time period.
 - Contract may optionally require the beneficiary 'proof-of-life' before any final distribution.
 - In the above, the user may optionally set a DAO or non-profit as beneficiary, in the event no beneficiaries submit required 'proof-of-life'.
 - Contract may be set with some time period for 'fail-safe' release, such as 20 years. If the 'fail-safe' period ends, the contract automatically distributes all funds and sends to beneficiaries.
