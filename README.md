@@ -16,8 +16,8 @@ Thoughts...One implementation may perhaps be achieved simply by sending a transa
 2. User will select will contract type
 3. User will register beneficiaries
 4. User will deposit a sum for later distribution in ETH
-5. Contract will somehow 'listen' and receive annual 'proof-of-life' validation
-6. If no 'proof-of-life' validation received within period,
+5. Contract will somehow 'listen' and receive 'proof-of-life' validation
+6. If no 'proof-of-life' validation received within required period, the contract automatically distributes all funds and sends to beneficiaries.
 
 **Optional functionality / Design Considerations:**
 
