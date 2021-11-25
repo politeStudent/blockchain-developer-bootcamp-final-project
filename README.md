@@ -1,5 +1,7 @@
 # blockchain-developer-bootcamp-final-project
-Repository for Consensys Developer Bootcamp final project
+
+Repository for Consensys Developer Bootcamp final project 2021 cohort
+
 # Block Will
 
 Create a financial instrument, similar to a will, where a deposit sum is made into a smart contract, having a list of beneficiaries addresses, which is to be paid out to the beneficiaries if a 'proof-of-life validation' is not received within a specified period. This would assume the contract owner is deceased or incapacitated.
