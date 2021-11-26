@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block Will</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header id="mainHeader">
+      <div class="container">
+        <h1>Block Will</h1>
+      </div>
+    </header>
+
+    <nav id="navbar">
+      <div class="container">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="setup.html">Set Up</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <section id="main">
+        <h1>Welcome to Set Up</h1>
+        <aside id="sidebar">
+          <b>My Will:</b>
+
+        </aside>
+
+        <div>
+          <h3>1. First, please <br />Register with Metamask!</h3>
+          <div id="mm-detected"></div>
+
+          <a class="btn" id="mm-connect">Get Started</a>          
+          <!-- Create will -->
+          <h4>2. Next, name your will</h4>
+          <div>
+            
+            <input id="ss-input-name" placeholder="Provide will name" />
+          </div>
+          <button id="ss-create-button">Create</button>
+          <div id="ss-create-display"></div>
+          <br>
+          <hr>
+          
+          <!-- Provide an input to deposit for beneficiaries -->
+          <h4>3. Deposit Funds</h4>
+       
+            <input
+              id="ss-input-box"
+              type="number"
+              placeholder="Deposit Amount"
+            />
+     
+          <button id="ss-input-button">Deposit</button>
+          <br /><br>
+          <hr />
+        
+          <h4>4. Add Beneficiaries</h4>
+    
+          <!-- Enter Beneficiaries -->
+          <div>
+            <input id="ss-input-driver" placeholder="Provide address" />
+          </div>
+          <button id="ss-driver-button">Add Beneficary</button>
+          <div id="addDriver"></div>
+    
+          <br>  
+          <button id="ss-getAllDrivers-button">Get All Beneficaries</button>
+          <div id="ss-getAllDrivers-output"></div>
+          <br>         
+
+          
+    </div>
+    <footer id="mainFooter">
+      <p>Copyright &copy; 2021 BlockWill</p>
+    </footer>
+    <script src="js/dapp.js"></script>
+  </body>
+</html>
