@@ -1,33 +1,121 @@
-# blockchain-developer-bootcamp-final-project
+## Features
 
-Repository for Consensys Developer Bootcamp final project - Fall 2021 cohort
+Block Will similar to a will, where a benefactor creates a will contract which is specific to that user (or ETH wallet address) and allows deposits, a list of beneficiaries (also ETH wallet addresses) . After registration, the benefactor names the wallet (e.g. family name) and may deposit a sum to the new blockwill smart contract. The benefacto may then create a list of beneficiaries addresses, which is to be paid out to the beneficiaries if a 'proof-of-life validation' is not received by thye will contract within a specified interval period (for the sake of illustration here, this is hardcoded at 5 min).
 
-# Block Will
+Interact with the WillFactory and Will contracts
+'Set-Up':
 
-Create a financial instrument, similar to a will, where a deposit sum is made into a smart contract, having a list of beneficiaries addresses, which is to be paid out to the beneficiaries if a 'proof-of-life validation' is not received within a specified period. This would assume the contract owner is deceased or incapacitated.
+- Register as Block Will user
+- Name your will instance
+- Deposit ETH into your will contract
+- Add beneficiaries to your will contract
 
-As a fail-safe, another period may optionally be defined wherein the sum in the contract is released automatically after a longer period passes, regardless of whether or not any 'proof-of-life' validation is received (e.g. after 20 years).
+Services:
 
-### **'Proof-of-life'** - _To Be Determined_
+- Withdraw all funds
+- Check for distribution eligibility (proof of life).
+- Check last 'proof of life' received
+- If 'no life' and appropriate interval passed, distribute funds to beneficiaries.
 
-Thoughts...One implementation may perhaps be achieved simply by sending a transaction to the contract. Another implementation may involve an oracle or interface to external api.
+## Requirements
 
-**Workflow**
+Requirements
 
-1. User will somehow register
-2. User will select will contract type
-3. User will register beneficiaries
-4. User will deposit a sum for later distribution in ETH
-5. Contract will somehow 'listen' and receive 'proof-of-life' validation
-6. If no 'proof-of-life' validation received within required period, the contract automatically distributes all funds and sends to beneficiaries.
+- NPM (v7.4.1)
+- NodeJs (v8.10.0)
+- ganache-cli (Ganache CLI v6.12.2 (ganache-core: 2.13.2))
+- truffle (v5.4.11)
+- parcel (v1.12.5)
 
-**Optional functionality / Design Considerations:**
+For the latest stable release of ganache-cli, and parcel:
 
-- Contract invests funds or 'yield farm' for relevant time period.
-- Contract may optionally require the beneficiary 'proof-of-life' before any final distribution.
-- In the above, the user may optionally set a DAO or non-profit as beneficiary, in the event no beneficiaries submit required 'proof-of-life'.
-- Contract may be set with some time period for 'fail-safe' release, such as 20 years. If the 'fail-safe' period ends, the contract automatically distributes all funds and sends to beneficiaries.
-- User may optionally set proportional distributions among many beneficiaries.
+```console
+$ npm install ganache-cli@latest --global
+$ npm install -g parcel-bundler
+```
 
-        For Example
-        `Alice: 50%; Bob 20%; Carol 30%`
+Once installed globally, you can start ganache right from your command line. Development is configured on port 7545:
+
+```console
+$ ganache-cli --port 7545
+
+```
+
+## Command line use
+
+You must first clone the repository in empty directory:
+
+```console
+$ git clone https://github.com/politeStudent/blockchain-developer-bootcamp-final-project.git
+```
+
+Compile the smart contracts
+
+```console
+$ truffle compile
+```
+
+#### Compile the contracts
+
+```console
+Compiling your contracts...
+===========================
+> Compiling ./contracts/Migrations.sol
+> Compiling ./contracts/WillFactory.sol
+> Compiling ./contracts/will.sol
+
+> Artifacts written to /mnt/e/dev/consensys/distTest/testClone1/blockchain-developer-bootcamp-final-project/build/contracts
+> Compiled successfully using:
+   - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
+```
+
+### Deploy the contracts
+
+```console
+$ truffle deploy
+  .
+  .
+  .
+  Deploying 'WillFactory'
+   -----------------------
+   > transaction hash:    0xbd7f71d8ae72e62338f0b4d7aef1b488c2765837910ffefcff99e9d97db0479a
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x5bDB281a3260F40b30Ba4d605a39A3E1155d6fb3
+   > block number:        4
+   > block timestamp:     1637938995
+   > account:             0xC4b171da7eDBECC76d55156b96D3cD933Df91cb0
+   > balance:             99.91246632
+   > gas used:            3173826 (0x306dc2)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.06347652 ETH
+
+```
+
+NOTE: The WillFactory contract deployment has the hardcoded contract address needed for the UI. Get get the WillFactory contract address (here, the example is 0x5bDB281a3260F40b30Ba4d605a39A3E1155d6fb3). In a text editor, add the WillFactory contract address to environment env.json file:
+
+```console
+$ nano env.json
+```
+
+Edit the file to modify the deployed WillFactory contract address in env.json:
+
+```json
+{
+  "DEPLOYEDCONTRACTID": "0x5bDB281a3260F40b30Ba4d605a39A3E1155d6fb3"
+}
+```
+
+Then start the application user interface using parcel:
+
+```console
+$ parcel index.html
+
+```
+
+From there, the application is available in your browser for use:
+
+```console
+Server running at http://localhost:1234
+✨  Built in 4.81s.
+```
