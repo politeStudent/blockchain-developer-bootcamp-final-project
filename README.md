@@ -1,6 +1,6 @@
 # blockchain-developer-bootcamp-final-project
 
-Repository for Consensys Developer Bootcamp final project 2021 cohort
+Repository for Consensys Developer Bootcamp final project - Fall 2021 cohort
 
 # Block Will
 
