@@ -1,0 +1,17 @@
+# truffle build directory
+build/
+.cache
+dist
+# Dependency directory
+node_modules
+# Infura details - secured
+.env
+
+# only used to package @openzeppelin/contracts
+contracts/build/
+# temporary artifact from solidity-coverage
+allFiredEvents
+.coverage_artifacts
+.coverage_cache
+.coverage_contracts
+
