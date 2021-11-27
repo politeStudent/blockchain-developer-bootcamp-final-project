@@ -94,7 +94,42 @@ $ truffle deploy
 
 ```
 
-NOTE: The WillFactory contract deployment has the hardcoded contract address needed for the UI. Get get the WillFactory contract address (here, the example is 0x5bDB281a3260F40b30Ba4d605a39A3E1155d6fb3). In a text editor, add the WillFactory contract address to environment env.json file:
+NOTE: The WillFactory contract deployment has the hardcoded contract address needed for the UI. Get get the WillFactory contract address (here, the example is 0x5bDB281a3260F40b30Ba4d605a39A3E1155d6fb3). 
+
+
+### Run the contract tests
+Example output:
+
+```console
+$ truffle test
+Using network 'development'.
+
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+  Contract: WillFactory
+    ✓ Will deployed, assert true
+    ✓ New account loaded
+    ✓ is owned by owner (72ms)
+    ✓ should mark addresses as enrolled (354ms)
+    ✓ should not mark unenrolled users as enrolled (85ms)
+    ✓ should create blockwill contract with correct owner (922ms)
+    ✓ should log add beneficary event when a beneficary is added (1195ms)
+    ✓ should delete beneficiaries and decrement count (1645ms)
+NOT THE OWNER!
+    ✓ should NOT allow adding a beneficary if not the will contract owner (2255ms)
+
+
+  9 passing (10s)
+----------------------------
+```
+### Run the UI in local testnet
+
+In a text editor, add the WillFactory contract address to environment env.json file for the UI. We will use the address in above compile example:
 
 ```console
 $ nano env.json
@@ -108,7 +143,7 @@ Edit the file to modify the deployed WillFactory contract address in env.json:
 }
 ```
 
-Then start the application user interface using parcel:
+Start the application user interface using parcel:
 
 ```console
 $ parcel index.html
@@ -121,3 +156,5 @@ From there, the application is available in your browser for use:
 Server running at http://localhost:1234
 ✨  Built in 4.81s.
 ```
+![image](https://user-images.githubusercontent.com/90842869/143689828-56d2325a-2f55-476e-a69a-337d661314c5.png)
+
