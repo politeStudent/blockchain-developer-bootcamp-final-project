@@ -1,6 +1,8 @@
 ## Features
 
-Block Will similar to a will, where a benefactor creates a will contract which is specific to that user (or ETH wallet address) and allows deposits, a list of beneficiaries (also ETH wallet addresses) . After registration, the benefactor names the wallet (e.g. family name) and may deposit a sum to the new blockwill smart contract. The benefactor may then create a list of beneficiaries addresses, which is to be paid out to the beneficiaries if a 'proof-of-life validation' is not received by the will contract within a specified interval period (for the sake of illustration here, this is hardcoded at 5 min).
+'Block Will' similar to a will, where a benefactor creates a will contract which is specific to that user (the user's ETH wallet address) and allows deposits.
+
+After registration, the benefactor names the wallet (e.g. family name) and may deposit a sum to the new blockwill smart contract. The benefactor may then create a list of beneficiaries addresses (also ETH wallet addresses), which is to be paid out to the beneficiaries if a 'proof-of-life validation' is not received by the will contract within a specified interval period (for the sake of illustration here, this is hardcoded at 5 min).
 
 Interact with the WillFactory and Will contracts
 'Set-Up':
