@@ -1,6 +1,0 @@
-Currently this thread connects to github main branch.
-
-uses second github generated key
-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
-
-dist folder is for distribution to a web server.  It will run parcel.
