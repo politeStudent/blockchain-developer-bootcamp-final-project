@@ -1,2 +1,9 @@
+This project uses two contracts:
+
+Name: Will.sol
+Address: 0x41f1AB33AC8e383407934f310d85ea82eaADeb60
+Network: Ropsten
+
+Name: WillFactory.sol
 Address: 0xEaDE88BCEee56363D0c7Ab76A4B51549C012b655
 Network: Ropsten
