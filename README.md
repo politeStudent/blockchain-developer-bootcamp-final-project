@@ -151,7 +151,7 @@ NOT THE OWNER!
 
 ### Run the UI in local testnet
 
-Additional requirements to develop locally:
+Additional requirements to develop locally, and deploy on ropsten. Store sensitive data in a .env file that you add to your .gitignore doc! (Read more about that here: https://consensys.net/blog/developers/how-to-avoid-uploading-your-private-key-to-github-approaches-to-prevent-making-your-secrets-public/)
 
 - hdwallet-provider (v1.7.0)
 - dotenv (v10.0.0)
