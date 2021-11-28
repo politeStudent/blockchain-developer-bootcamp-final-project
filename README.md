@@ -28,7 +28,7 @@ Services:
 
 http://5280.duckdns.org/
 
-### Screencast demo video link:
+### Screencast demo:
 
 https://www.loom.com/share/c740821d24874e78a12885cb6e1e0abf
 
