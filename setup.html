@@ -19,7 +19,7 @@
       <div class="container">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="setup.html">Set Up</a></li>
+          <li><a href="setup.html">Set-Up</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -28,52 +28,52 @@
 
     <div class="container">
       <section id="main">
-        <h1>Welcome to Set Up</h1>
+        <h1>1. Set-Up</h1>
         <aside id="sidebar">
           <b>My Will:</b>
 
         </aside>
 
         <div>
-          <h3>1. First, please <br />Register with Metamask!</h3>
+          <h3>a. Register (always start here)</h3>
           <div id="mm-detected"></div>
 
-          <a class="btn" id="mm-connect">Get Started</a>          
+          <a class="btn" id="mm-connect">Connect Wallet</a>          
           <!-- Create will -->
-          <h4>2. Next, name your will</h4>
+          <h4>b. Name your Will (easy reference)</h4>
           <div>
             
             <input id="ss-input-name" placeholder="Provide will name" />
           </div>
-          <button id="ss-create-button">Create</button>
+          <button id="ss-create-button">Add Name</button>
           <div id="ss-create-display"></div>
           <br>
           <hr>
           
           <!-- Provide an input to deposit for beneficiaries -->
-          <h4>3. Deposit Funds</h4>
+          <h4>c. Deposit Eth Funds (in Wei)</h4>
        
             <input
               id="ss-input-box"
               type="number"
-              placeholder="Deposit Amount"
+              placeholder="Deposit ETH Amount"
             />
      
           <button id="ss-input-button">Deposit</button>
           <br /><br>
           <hr />
         
-          <h4>4. Add Beneficiaries</h4>
+          <h4>d. Add Beneficiaries (ETH address)</h4>
     
           <!-- Enter Beneficiaries -->
           <div>
-            <input id="ss-input-driver" placeholder="Provide address" />
-          </div>
+            <input id="ss-input-driver" placeholder="Provide ETH address" />
+          </div><em>example: 0xB0Dd275669a4B1AB8433018be9E61215E524a8A1</em><br>
           <button id="ss-driver-button">Add Beneficary</button>
           <div id="addDriver"></div>
     
           <br>  
-          <button id="ss-getAllDrivers-button">Get All Beneficaries</button>
+          <button id="ss-getAllDrivers-button">Show All Addresses</button>
           <div id="ss-getAllDrivers-output"></div>
           <br>         
 

@@ -98,7 +98,7 @@ ssLife.onclick = async () => {
   await blockWill.methods
     .setLastAlive(cust)
     .send({ from: ethereum.selectedAddress });
-  document.getElementById("ss-display-life").value = "ok";
+  document.getElementById("ss-display-lifeSet").innerHTML = "ok:";
 };
 
 // distribute to beneficiaries
