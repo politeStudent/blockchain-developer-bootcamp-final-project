@@ -115,7 +115,7 @@ $ truffle deploy
 
 ```
 
-NOTE: The WillFactory contract deployment has the hardcoded contract address needed for the UI. Get get the WillFactory contract address (here, the example is 0x5bDB281a3260F40b30Ba4d605a39A3E1155d6fb3).
+NOTE: The WillFactory contract deployment has the hardcoded contract address needed for the UI. Get get the WillFactory contract address (here, the example is 0x5bDB281a3260F40b30Ba4d605a39A3E1155d6fb3) if you need to develop the application locally, and deploy on a testnet.  See below.
 
 ### Run the contract tests
 
@@ -151,7 +151,7 @@ NOT THE OWNER!
 
 ### Run the UI in local testnet
 
-Additional requirements to develop locally, and deploy on ropsten. Store sensitive data in a .env file that you add to your .gitignore doc! (Read more about that here: https://consensys.net/blog/developers/how-to-avoid-uploading-your-private-key-to-github-approaches-to-prevent-making-your-secrets-public/)
+Additional requirements are needed to develop locally, and deploy on a testnet like Ropsten. It is advised to store sensitive data in a .env file that you add to your .gitignore file (Read more about that here: https://consensys.net/blog/developers/how-to-avoid-uploading-your-private-key-to-github-approaches-to-prevent-making-your-secrets-public/). The following software is recommended:
 
 - hdwallet-provider (v1.7.0)
 - dotenv (v10.0.0)
