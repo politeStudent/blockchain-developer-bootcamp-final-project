@@ -189,3 +189,12 @@ Server running at http://localhost:1234
 
 ![image](https://user-images.githubusercontent.com/90842869/143777733-22fe7f53-2bdd-43a3-8304-ae58a55418f9.png)
 
+
+### Future considerations
+
+- Allow 'Wait Interval' to be user defined (not 5 minutes).
+- Complete 'Power of Attorney' functionality (partially implemented), with multisig wallet.
+- Run audtiting software checks.
+
+
+
