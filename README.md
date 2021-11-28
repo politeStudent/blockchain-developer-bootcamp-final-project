@@ -20,9 +20,8 @@ The purpose of 'Block Will' is to simulate this. The user will set up a smart co
 Services:
 
 - Withdraw all funds
-- Check for distribution eligibility (proof of life).
-- Check last 'proof of life' received
-- If 'no life' and appropriate interval passed, allow distribution of funds to beneficiaries.
+- Check for distribution eligibility (proof of life). If 'no life' and appropriate interval passed, allow distribution of funds to beneficiaries.
+- Check last 'proof of life' received.
 
 ### Publically Assessable User Interface -> to Ropsten Testnet:
 
