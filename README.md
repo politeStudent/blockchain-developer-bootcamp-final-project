@@ -1,10 +1,15 @@
 ## Features
 
-'Block Will' similar to a will, where a benefactor creates a will contract which is specific to that user (the user's ETH wallet address) and allows deposits.
+'Block Will' similar to a will, where a benefactor, in the event of death, leaves beneficiaries their wealth or estate.
 
-After registration, the benefactor names the wallet (e.g. family name) and may deposit a sum to the new blockwill smart contract. The benefactor may then create a list of beneficiaries addresses (also ETH wallet addresses), which is to be paid out to the beneficiaries if a 'proof-of-life validation' is not received by the will contract within a specified interval period (for the sake of illustration here, this is hardcoded at 5 min).
+The purpose of 'Block Will' is to simulate this. The user will set up a smart contract on the ethereum blockchain that allows the funds to be distributed to any beneficiaries, upon 'end of life'.
 
-Interact with the WillFactory and Will contracts
+- The benefactor registers which creates a will contract which is specific to that user (ETH wallet address).
+- After registration, the benefactor names the wallet (e.g. family name).
+- The benefactor deposits ether to the will, becoming the 'funds'.
+- The benefactor creates a list of beneficiaries (as ETH wallet addresses).
+- At 'End of Life' (after 5 minutes if a 'proof-of-life validation' is not received) the will contract funds are eligible for distribution.
+
 'Set-Up':
 
 - Register as Block Will user
@@ -17,7 +22,19 @@ Services:
 - Withdraw all funds
 - Check for distribution eligibility (proof of life).
 - Check last 'proof of life' received
-- If 'no life' and appropriate interval passed, distribute funds to beneficiaries.
+- If 'no life' and appropriate interval passed, allow distribution of funds to beneficiaries.
+
+### Screencast video link
+
+https://www.loom.com/share/c740821d24874e78a12885cb6e1e0abf
+
+### Github Repository
+
+https://github.com/politeStudent/blockchain-developer-bootcamp-final-project.git
+
+### Public Ethereum wallet for certification:
+
+0xDEA8dB936f39A05e4ceD634B1120cC734fb430eC
 
 ## Requirements
 
@@ -34,6 +51,7 @@ For the latest stable release of ganache-cli, and parcel:
 ```console
 $ npm install ganache-cli@latest --global
 $ npm install -g parcel-bundler
+
 ```
 
 Once installed globally, you can start ganache right from your command line. Development is configured on port 7545:
@@ -94,10 +112,10 @@ $ truffle deploy
 
 ```
 
-NOTE: The WillFactory contract deployment has the hardcoded contract address needed for the UI. Get get the WillFactory contract address (here, the example is 0x5bDB281a3260F40b30Ba4d605a39A3E1155d6fb3). 
-
+NOTE: The WillFactory contract deployment has the hardcoded contract address needed for the UI. Get get the WillFactory contract address (here, the example is 0x5bDB281a3260F40b30Ba4d605a39A3E1155d6fb3).
 
 ### Run the contract tests
+
 Example output:
 
 ```console
@@ -127,7 +145,19 @@ NOT THE OWNER!
   9 passing (10s)
 ----------------------------
 ```
+
 ### Run the UI in local testnet
+
+Additional requirements to develop locally:
+
+- hdwallet-provider (v1.7.0)
+- dotenv (v10.0.0)
+
+```console
+// to compile, deploy, run locally
+$ npm install @truffle/hdwallet-provider
+$ npm install dotenv
+```
 
 In a text editor, add the WillFactory contract address to environment env.json file for the UI. We will use the address in above compile example:
 
@@ -156,5 +186,5 @@ From there, the application is available in your browser for use:
 Server running at http://localhost:1234
 ✨  Built in 4.81s.
 ```
-![image](https://user-images.githubusercontent.com/90842869/143689828-56d2325a-2f55-476e-a69a-337d661314c5.png)
 
+![image](https://user-images.githubusercontent.com/90842869/143689828-56d2325a-2f55-476e-a69a-337d661314c5.png)

@@ -115,7 +115,7 @@ createBtn.onclick = async () => {
     document.getElementById("ss-input-name").value = "";
     // willCreated = 1;
   } else {
-    alert("You have a will. Currently, one will per address.");
+    alert("You have a will. Only one will per ETH address!");
     document.getElementById("ss-input-name").value = "";
     return;
   }

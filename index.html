@@ -18,7 +18,7 @@
       <div class="container">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="setup.html">Set Up</a></li>
+          <li><a href="setup.html">Set-Up</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -27,9 +27,8 @@
     <section id="showcase">
       <div class="container">
         <h1>
-          Block Will allows release of any ETH funds deposited to beneficiaries
-          if no 'proof of life' has posted, <br> and after an appropriate period of 'wait time'
-          has sufficiently elapsed.
+          How do I leave crypto to loved ones? <br /><br />Block Will allows you
+          to transfer funds to any number of beneficiaries at 'end of life'.
         </h1>
       </div>
     </section>
@@ -37,37 +36,73 @@
       <section id="main" style="width: 55%">
         <h3>Welcome</h3>
         <p>
-          A will is a written document that sets out what you would like to
-          happen to your possessions after you die. A will must be signed and
-          witnessed. When you die, your possessions are called your ‘estate’. A
-          ‘testator’ is a person who writes a will. If you die without leaving a
-          will, you die ‘intestate’. <hr />For crypto, you may die without leaving access
-           to your keys. Here you can deposit Ether in a smart contract and enter beneficiaries. 
-          Then make periodic updates to indicate you are 'still alive'. If a certain interval has passed 
-          (illustrated here as 5 minutes, but may configurable) after the last 'Alive' message was received, the benefactor is presumed dead, and the funds may be distributed.
+          'Block Will' similar to a will, where a benefactor, in the event of
+          death, leaves beneficiaries their wealth or estate. <br /><br />
+          The purpose of 'Block Will' is to simulate this. The user may set up a
+          smart contract on the ethereum blockchain that allows the funds to be
+          distributed to any number of beneficiaries, upon 'end of life'. An
+          example of this smart contract is deployed on the <b>Ropsten</b> test
+          network <a href="http://5280.duckdns.org/">here.</a><br />
         </p>
+
+        <ul>
+          <li>
+            The benefactor registers which creates a will contract which is
+            specific to that user (ETH wallet address).
+          </li>
+        </ul>
+        <ul>
+          <li>
+            After registration, the benefactor names the wallet (e.g. family
+            name).
+          </li>
+        </ul>
+        <ul>
+          <li>
+            The benefactor deposits ether to the will, becoming the 'funds'.
+          </li>
+        </ul>
+        <ul>
+          <li>
+            The benefactor creates a list of beneficiaries (as ETH wallet
+            addresses).
+          </li>
+        </ul>
+        <ul>
+          <li>
+            At 'End of Life' (after 5 minutes if a 'proof-of-life validation' is
+            not received) the will contract funds are eligible for distribution.
+          </li>
+        </ul>
         <p>This is not a legal will.</p>
       </section>
-      <br /><br>
+      <br /><br />
       <aside id="sidebar">
-        Steps:
+        Logical Steps:
         <ul>
-          1. Register
+          1a. Register your Ethereum Address (uses Ropsten Network)
         </ul>
         <ul>
-          2. Enter Will Name & Deposit Funds
+          1b. Enter your Will Name
         </ul>
         <ul>
-          3. Enter Beneficiaries
+          1c. Deposit ETH Funds
         </ul>
         <ul>
-          4. Services - Withdraw Funds
+          1d. Enter Beneficiaries (as Eth address)
+        </ul>
+        Available Services:
+        <ul>
+          - Withdraw Funds (only owner)
         </ul>
         <ul>
-          5. Services - Check for Life & Distribute
+          - Check for Life & 'Last Alive' time
         </ul>
         <ul>
-          6. Services - Periodically signal 'Alive'
+          - Allow Distribution as appropriate (5 minutes after 'last alive')
+        </ul>
+        <ul>
+          - Periodically signal 'I am Alive' (only owner)
         </ul>
       </aside>
     </div>
