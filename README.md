@@ -24,11 +24,15 @@ Services:
 - Check last 'proof of life' received
 - If 'no life' and appropriate interval passed, allow distribution of funds to beneficiaries.
 
-### Screencast video link
+### Publically Assessable User Interface -> to Ropsten Testnet:
+
+http://5280.duckdns.org/
+
+### Screencast video link:
 
 https://www.loom.com/share/c740821d24874e78a12885cb6e1e0abf
 
-### Github Repository
+### Github Repository:
 
 https://github.com/politeStudent/blockchain-developer-bootcamp-final-project.git
 
