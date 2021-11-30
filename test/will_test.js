@@ -1,7 +1,14 @@
 const willTest = artifacts.require("WillFactory");
 
 /*
-      TDD cases for some main functions in Block Will
+      TDD cases for some main functions in Block Will.
+      What the tests are covering:
+      - Can create an account
+      - Can enroll a customer
+      - Can create a Will instance
+      - Can add a beneficiary & log event
+      - Can delete a beneficary
+      - Restricts adding beneficaries, if not contract Will owner      
  */
 
 const { catchRevert } = require("./exceptionsHelpers.js");
