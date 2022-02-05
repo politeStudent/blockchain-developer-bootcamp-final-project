@@ -25,7 +25,7 @@ Services:
 
 ### Publically Assessable User Interface -> to Ropsten Testnet:
 
-http://5280.duckdns.org/
+http://5280.duckdns.org:9000
 
 ### Screencast demo:
 
